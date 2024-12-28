@@ -1,0 +1,17 @@
+/Users/elmin/RiderProjects/BlogApp/BlogApp.BL/bin/Debug/net8.0/BlogApp.BL.deps.json
+/Users/elmin/RiderProjects/BlogApp/BlogApp.BL/bin/Debug/net8.0/BlogApp.BL.dll
+/Users/elmin/RiderProjects/BlogApp/BlogApp.BL/bin/Debug/net8.0/BlogApp.BL.pdb
+/Users/elmin/RiderProjects/BlogApp/BlogApp.BL/bin/Debug/net8.0/BlogApp.Core.dll
+/Users/elmin/RiderProjects/BlogApp/BlogApp.BL/bin/Debug/net8.0/BlogApp.DAL.dll
+/Users/elmin/RiderProjects/BlogApp/BlogApp.BL/bin/Debug/net8.0/BlogApp.DAL.pdb
+/Users/elmin/RiderProjects/BlogApp/BlogApp.BL/bin/Debug/net8.0/BlogApp.Core.pdb
+/Users/elmin/RiderProjects/BlogApp/BlogApp.BL/obj/Debug/net8.0/BlogApp.BL.csproj.AssemblyReference.cache
+/Users/elmin/RiderProjects/BlogApp/BlogApp.BL/obj/Debug/net8.0/BlogApp.BL.GeneratedMSBuildEditorConfig.editorconfig
+/Users/elmin/RiderProjects/BlogApp/BlogApp.BL/obj/Debug/net8.0/BlogApp.BL.AssemblyInfoInputs.cache
+/Users/elmin/RiderProjects/BlogApp/BlogApp.BL/obj/Debug/net8.0/BlogApp.BL.AssemblyInfo.cs
+/Users/elmin/RiderProjects/BlogApp/BlogApp.BL/obj/Debug/net8.0/BlogApp.BL.csproj.CoreCompileInputs.cache
+/Users/elmin/RiderProjects/BlogApp/BlogApp.BL/obj/Debug/net8.0/BlogApp.BL.csproj.Up2Date
+/Users/elmin/RiderProjects/BlogApp/BlogApp.BL/obj/Debug/net8.0/BlogApp.BL.dll
+/Users/elmin/RiderProjects/BlogApp/BlogApp.BL/obj/Debug/net8.0/refint/BlogApp.BL.dll
+/Users/elmin/RiderProjects/BlogApp/BlogApp.BL/obj/Debug/net8.0/BlogApp.BL.pdb
+/Users/elmin/RiderProjects/BlogApp/BlogApp.BL/obj/Debug/net8.0/ref/BlogApp.BL.dll
