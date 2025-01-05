@@ -1,6 +1,6 @@
 using AutoMapper;
 using BlogApp.BL.DTOs.UserDtos;
-using BlogApp.BL.Exceptions.UserExceptions;
+using BlogApp.BL.Exceptions.Common;
 using BlogApp.BL.Services.Interfaces;
 using BlogApp.Core.Entities;
 using BlogApp.Core.Repositories;
@@ -9,10 +9,10 @@ namespace BlogApp.BL.Services.Implements;
 
 public class UserService(IMapper _mapper,IUserRepository _repo):IUserService
 {
-    public async Task<string> CreateAsync(UserCreateDto dto)
+    public async Task<string> CreateAsync(RegisterDto dto)
     {
         var existUser = await _repo.GetByUserNameAsync(dto.Username);
-        if (existUser != null) throw new UserAlreadyExistsException();
+        if (existUser != null) throw new ExistException<User>();
         
        User user = _mapper.Map<User>(dto);
        await _repo.AddAsync(user);
@@ -25,11 +25,11 @@ public class UserService(IMapper _mapper,IUserRepository _repo):IUserService
         throw new NotImplementedException();
     }
 
-    public async Task<bool> LoginAsync(UserLoginDto dto)
+    public async Task<bool> LoginAsync(LoginDto dto)
     {
-        var user = await _repo.GetByUserNameAsync(dto.Username);
-        if (user == null) throw new UserNotFound();
-        if (user.Username != dto.Username || user.PasswordHash != dto.Password) return false;
+        var user = await _repo.GetByUserNameAsync(dto.UsernameOrEmail);
+        if (user == null) throw new NotFoundException<User>();
+        if (user.Username != dto.UsernameOrEmail || user.PasswordHash != dto.Password) return false;
         return true;
     }
   

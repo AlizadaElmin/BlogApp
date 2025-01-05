@@ -9,5 +9,5 @@ public class User:BaseEntity
     public string Email { get; set; }
     public string PasswordHash { get; set; }
     public bool IsMale { get; set; }
-    public int Role { get; set; }
+    public int Role { get; set; } = 2;
 }

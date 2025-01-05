@@ -1,7 +1,7 @@
 namespace BlogApp.BL.DTOs.UserDtos;
 
-public class UserLoginDto
+public class LoginDto
 {
-    public string Username { get; set; }
+    public string UsernameOrEmail { get; set; }
     public string Password { get; set; }
 }

@@ -1,3 +1,5 @@
+using BlogApp.BL.ExternalServices.Implements;
+using BlogApp.BL.ExternalServices.Interfaces;
 using BlogApp.BL.Services.Implements;
 using BlogApp.BL.Services.Interfaces;
 using FluentValidation;
@@ -13,6 +15,10 @@ public static class ServiceRegistration
     {
         services.AddScoped<ICategoryService, CategoryService>();
         services.AddScoped<IUserService, UserService>();
+        services.AddScoped<IAuthService, AuthService>();
+        services.AddScoped<IJwtTokenHandler, JwtTokenHandler>();
+        // services.AddScoped<IEmailService, EmailService>();
+        
         return services;
     }
 

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/elmin/RiderProjects/BlogApp/BlogApp.Core/BlogApp.Core.csproj",
+      "projectUniqueName": "/Users/elmin/Desktop/Code/Blog/BlogApp/BlogApp.Core/BlogApp.Core.csproj",
       "projectName": "BlogApp.Core",
-      "projectPath": "/Users/elmin/RiderProjects/BlogApp/BlogApp.Core/BlogApp.Core.csproj",
+      "projectPath": "/Users/elmin/Desktop/Code/Blog/BlogApp/BlogApp.Core/BlogApp.Core.csproj",
       "packagesPath": "/Users/elmin/.nuget/packages/",
-      "outputPath": "/Users/elmin/RiderProjects/BlogApp/BlogApp.Core/obj/",
+      "outputPath": "/Users/elmin/Desktop/Code/Blog/BlogApp/BlogApp.Core/obj/",
       "projectStyle": "PackageReference",
       "UsingMicrosoftNETSdk": false,
       "configFilePaths": [

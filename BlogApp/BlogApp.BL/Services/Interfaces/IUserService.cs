@@ -5,7 +5,7 @@ namespace BlogApp.BL.Services.Interfaces;
 
 public interface IUserService
 {
-    Task<string> CreateAsync(UserCreateDto dto);
-    Task<bool> LoginAsync(UserLoginDto dto);
+    Task<string> CreateAsync(RegisterDto dto);
+    Task<bool> LoginAsync(LoginDto dto);
     Task DeleteAsync(string username);
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/elmin/RiderProjects/BlogApp/BlogApp.API/BlogApp.API.csproj": {}
+    "/Users/elmin/Desktop/Code/Blog/BlogApp/BlogApp.API/BlogApp.API.csproj": {}
   },
   "projects": {
-    "/Users/elmin/RiderProjects/BlogApp/BlogApp.API/BlogApp.API.csproj": {
+    "/Users/elmin/Desktop/Code/Blog/BlogApp/BlogApp.API/BlogApp.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/elmin/RiderProjects/BlogApp/BlogApp.API/BlogApp.API.csproj",
+        "projectUniqueName": "/Users/elmin/Desktop/Code/Blog/BlogApp/BlogApp.API/BlogApp.API.csproj",
         "projectName": "BlogApp.API",
-        "projectPath": "/Users/elmin/RiderProjects/BlogApp/BlogApp.API/BlogApp.API.csproj",
+        "projectPath": "/Users/elmin/Desktop/Code/Blog/BlogApp/BlogApp.API/BlogApp.API.csproj",
         "packagesPath": "/Users/elmin/.nuget/packages/",
-        "outputPath": "/Users/elmin/RiderProjects/BlogApp/BlogApp.API/obj/",
+        "outputPath": "/Users/elmin/Desktop/Code/Blog/BlogApp/BlogApp.API/obj/",
         "projectStyle": "PackageReference",
         "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
@@ -27,8 +27,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/elmin/RiderProjects/BlogApp/BlogApp.BL/BlogApp.BL.csproj": {
-                "projectPath": "/Users/elmin/RiderProjects/BlogApp/BlogApp.BL/BlogApp.BL.csproj"
+              "/Users/elmin/Desktop/Code/Blog/BlogApp/BlogApp.BL/BlogApp.BL.csproj": {
+                "projectPath": "/Users/elmin/Desktop/Code/Blog/BlogApp/BlogApp.BL/BlogApp.BL.csproj"
               }
             }
           }
@@ -48,6 +48,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.11, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.4, )"
@@ -86,14 +90,14 @@
         }
       }
     },
-    "/Users/elmin/RiderProjects/BlogApp/BlogApp.BL/BlogApp.BL.csproj": {
+    "/Users/elmin/Desktop/Code/Blog/BlogApp/BlogApp.BL/BlogApp.BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/elmin/RiderProjects/BlogApp/BlogApp.BL/BlogApp.BL.csproj",
+        "projectUniqueName": "/Users/elmin/Desktop/Code/Blog/BlogApp/BlogApp.BL/BlogApp.BL.csproj",
         "projectName": "BlogApp.BL",
-        "projectPath": "/Users/elmin/RiderProjects/BlogApp/BlogApp.BL/BlogApp.BL.csproj",
+        "projectPath": "/Users/elmin/Desktop/Code/Blog/BlogApp/BlogApp.BL/BlogApp.BL.csproj",
         "packagesPath": "/Users/elmin/.nuget/packages/",
-        "outputPath": "/Users/elmin/RiderProjects/BlogApp/BlogApp.BL/obj/",
+        "outputPath": "/Users/elmin/Desktop/Code/Blog/BlogApp/BlogApp.BL/obj/",
         "projectStyle": "PackageReference",
         "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
@@ -109,8 +113,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/elmin/RiderProjects/BlogApp/BlogApp.DAL/BlogApp.DAL.csproj": {
-                "projectPath": "/Users/elmin/RiderProjects/BlogApp/BlogApp.DAL/BlogApp.DAL.csproj"
+              "/Users/elmin/Desktop/Code/Blog/BlogApp/BlogApp.DAL/BlogApp.DAL.csproj": {
+                "projectPath": "/Users/elmin/Desktop/Code/Blog/BlogApp/BlogApp.DAL/BlogApp.DAL.csproj"
               }
             }
           }
@@ -171,14 +175,14 @@
         }
       }
     },
-    "/Users/elmin/RiderProjects/BlogApp/BlogApp.Core/BlogApp.Core.csproj": {
+    "/Users/elmin/Desktop/Code/Blog/BlogApp/BlogApp.Core/BlogApp.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/elmin/RiderProjects/BlogApp/BlogApp.Core/BlogApp.Core.csproj",
+        "projectUniqueName": "/Users/elmin/Desktop/Code/Blog/BlogApp/BlogApp.Core/BlogApp.Core.csproj",
         "projectName": "BlogApp.Core",
-        "projectPath": "/Users/elmin/RiderProjects/BlogApp/BlogApp.Core/BlogApp.Core.csproj",
+        "projectPath": "/Users/elmin/Desktop/Code/Blog/BlogApp/BlogApp.Core/BlogApp.Core.csproj",
         "packagesPath": "/Users/elmin/.nuget/packages/",
-        "outputPath": "/Users/elmin/RiderProjects/BlogApp/BlogApp.Core/obj/",
+        "outputPath": "/Users/elmin/Desktop/Code/Blog/BlogApp/BlogApp.Core/obj/",
         "projectStyle": "PackageReference",
         "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
@@ -230,14 +234,14 @@
         }
       }
     },
-    "/Users/elmin/RiderProjects/BlogApp/BlogApp.DAL/BlogApp.DAL.csproj": {
+    "/Users/elmin/Desktop/Code/Blog/BlogApp/BlogApp.DAL/BlogApp.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/elmin/RiderProjects/BlogApp/BlogApp.DAL/BlogApp.DAL.csproj",
+        "projectUniqueName": "/Users/elmin/Desktop/Code/Blog/BlogApp/BlogApp.DAL/BlogApp.DAL.csproj",
         "projectName": "BlogApp.DAL",
-        "projectPath": "/Users/elmin/RiderProjects/BlogApp/BlogApp.DAL/BlogApp.DAL.csproj",
+        "projectPath": "/Users/elmin/Desktop/Code/Blog/BlogApp/BlogApp.DAL/BlogApp.DAL.csproj",
         "packagesPath": "/Users/elmin/.nuget/packages/",
-        "outputPath": "/Users/elmin/RiderProjects/BlogApp/BlogApp.DAL/obj/",
+        "outputPath": "/Users/elmin/Desktop/Code/Blog/BlogApp/BlogApp.DAL/obj/",
         "projectStyle": "PackageReference",
         "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
@@ -253,8 +257,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/elmin/RiderProjects/BlogApp/BlogApp.Core/BlogApp.Core.csproj": {
-                "projectPath": "/Users/elmin/RiderProjects/BlogApp/BlogApp.Core/BlogApp.Core.csproj"
+              "/Users/elmin/Desktop/Code/Blog/BlogApp/BlogApp.Core/BlogApp.Core.csproj": {
+                "projectPath": "/Users/elmin/Desktop/Code/Blog/BlogApp/BlogApp.Core/BlogApp.Core.csproj"
               }
             }
           }

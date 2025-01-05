@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "66XFYxMnw3E=",
+  "dgSpecHash": "+AKeaksyYCo=",
   "success": true,
-  "projectFilePath": "/Users/elmin/RiderProjects/BlogApp/BlogApp.BL/BlogApp.BL.csproj",
+  "projectFilePath": "/Users/elmin/Desktop/Code/Blog/BlogApp/BlogApp.BL/BlogApp.BL.csproj",
   "expectedPackageFiles": [
     "/Users/elmin/.nuget/packages/automapper/13.0.1/automapper.13.0.1.nupkg.sha512",
     "/Users/elmin/.nuget/packages/azure.core/1.38.0/azure.core.1.38.0.nupkg.sha512",

@@ -2,6 +2,6 @@ namespace BlogApp.BL.Exceptions;
 
 public interface IBaseException
 {
-    int StatusCode { get; }
+    int Code { get; }
     string ErrorMessage { get; }
 }
