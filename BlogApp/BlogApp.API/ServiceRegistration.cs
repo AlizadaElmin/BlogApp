@@ -12,11 +12,11 @@ public static class ServiceRegistration
         services.Configure<JwtOptions>(Configuration.GetSection(JwtOptions.Jwt));
         return services;
     }
-    // public static IServiceCollection AddEmailOptions(this IServiceCollection services,IConfiguration Configuration)
-    // {
-    //     services.Configure<EmailOptions>(Configuration.GetSection(EmailOptions.Name));
-    //     return services;
-    // }
+    public static IServiceCollection AddEmailOptions(this IServiceCollection services,IConfiguration Configuration)
+    {
+        services.Configure<EmailOptions>(Configuration.GetSection(EmailOptions.Name));
+        return services;
+    }
     public static IServiceCollection AddAuth(this IServiceCollection services,IConfiguration Configuration)
     {
         JwtOptions jwtOpt = new JwtOptions();
