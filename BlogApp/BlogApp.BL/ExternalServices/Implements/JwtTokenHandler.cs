@@ -22,7 +22,7 @@ public class JwtTokenHandler:IJwtTokenHandler
             new Claim(ClaimTypes.Name, user.Username),
             new Claim(ClaimTypes.Email, user.Email),
             new Claim(ClaimTypes.Role,user.Role.ToString()),
-            new Claim(ClaimTypes.GivenName,user.Name + "" + user.Surname)
+            new Claim(ClaimTypes.NameIdentifier,user.Name)
         ];
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(opt.SecretKey));
         SigningCredentials cred = new(key, SecurityAlgorithms.HmacSha256);

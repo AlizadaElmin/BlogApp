@@ -6,5 +6,5 @@ public interface IUserRepository:IGenericRepository<User>
 {
     User GetCurrentUser();
     int GetCurrentUserId();
-    Task<User?> GetByUserNameAsync(string userName);
+    Task<User?> GetByUserNameAsync(string userName); 
 }

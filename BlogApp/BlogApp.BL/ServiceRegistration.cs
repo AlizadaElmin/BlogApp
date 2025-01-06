@@ -34,4 +34,5 @@ public static class ServiceRegistration
         services.AddAutoMapper(typeof(ServiceRegistration));
         return services;
     }
+    
 }

@@ -9,6 +9,7 @@ using BlogApp.Core.Repositories;
 using BlogApp.DAL.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Options;
 
 namespace BlogApp.BL.Services.Implements;
@@ -17,31 +18,51 @@ public class EmailService:IEmailService
 {
     readonly SmtpClient _client;
     readonly MailAddress _from;
-    readonly HttpContext _context;
     readonly IUserRepository _repo;
-    // readonly UserManager<User> _userManager;
-    
-    public EmailService(IOptions<EmailOptions> options,IHttpContextAccessor acc,IUserRepository userRepo)
+    readonly IMemoryCache _cache;
+    readonly IHttpContextAccessor _httpContextAccessor;
+    public EmailService(IOptions<EmailOptions> options,IMemoryCache cache,IHttpContextAccessor httpContextAccessor)
     {
         var opt = options.Value;
         _client = new(opt.Host, opt.Port);
         _client.Credentials = new NetworkCredential(opt.Sender, opt.Password);
         _client.EnableSsl = true;
         _from = new MailAddress(opt.Sender,"Elmin");
-        _context = acc.HttpContext;
-        _repo = userRepo;
+        _cache = cache;
+        _httpContextAccessor = httpContextAccessor;
     }
-    public async Task SendEmailConfirmation(string name)
+    public async Task SendEmailConfirmation()
     {
-        User? user =  await _repo.GetByUserNameAsync(name);
-        if (user == null)
-            throw new NotFoundException<User>();
-        MailAddress to = new(user.Email);
+        string? email = _httpContextAccessor.HttpContext?.User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value;
+        string? name = _httpContextAccessor.HttpContext?.User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value;
+        if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(name))
+        {
+            throw new UnauthorizedAccessException("User is not authenticated.");
+        }
+       
+        var token = Guid.NewGuid().ToString();
+        _cache.Set(name, token, TimeSpan.FromMinutes(10));
+        MailAddress to = new(email);
         MailMessage msg = new(_from, to);
         msg.Subject = "Confirm your email address";
-        msg.IsBodyHtml = true;
+        msg.Body = token;
         await _client.SendMailAsync(msg);
-        user.Role = 1;
-        await  _repo.SaveAsync();
     }
+
+    public async Task AccountVerify(string userToken)
+    {
+        string? name = _httpContextAccessor.HttpContext?.User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value;
+        var cacheToken = _cache.Get<string>(name);
+        if (string.IsNullOrEmpty(userToken) || string.IsNullOrEmpty(name))
+        {
+            throw new UnauthorizedAccessException("User is not authenticated or token is missing.");
+        }
+        if (!(cacheToken != null && cacheToken == userToken))
+            throw new NotFoundException<User>();
+        
+        User? user = await _repo.GetByUserNameAsync(name);
+        user!.Role = 1;
+        await _repo.SaveAsync();
+    }
+
 }

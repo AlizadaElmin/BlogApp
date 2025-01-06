@@ -8,9 +8,16 @@ namespace BlogApp.API.Controllers;
 public class AccountController(IEmailService _service):ControllerBase
 {
     [HttpPost("[action]")]
-    public async Task<IActionResult> Verify(string username)
+    public async Task<IActionResult> SendEmail()
     {
-        await _service.SendEmailConfirmation(username);
+        await _service.SendEmailConfirmation();
         return Content("Email sended"); 
+    }
+    
+    [HttpPost("[action]")]
+    public async Task<IActionResult> VerifyAccount(string token)
+    {
+        await _service.AccountVerify(token);
+        return Content("Email confirmed"); 
     }
 }

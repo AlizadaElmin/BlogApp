@@ -46,6 +46,7 @@ builder.Services.AddServices();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddFluentValidation();
 builder.Services.AddAutoMapper();
+builder.Services.AddMemoryCache();
 
 var app = builder.Build();
 
