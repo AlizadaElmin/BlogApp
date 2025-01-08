@@ -21,7 +21,7 @@ public class EmailService:IEmailService
     readonly IUserRepository _repo;
     readonly IMemoryCache _cache;
     readonly IHttpContextAccessor _httpContextAccessor;
-    public EmailService(IOptions<EmailOptions> options,IMemoryCache cache,IHttpContextAccessor httpContextAccessor)
+    public EmailService(IOptions<EmailOptions> options,IMemoryCache cache,IHttpContextAccessor httpContextAccessor,IUserRepository repo)
     {
         var opt = options.Value;
         _client = new(opt.Host, opt.Port);
@@ -30,6 +30,7 @@ public class EmailService:IEmailService
         _from = new MailAddress(opt.Sender,"Elmin");
         _cache = cache;
         _httpContextAccessor = httpContextAccessor;
+        _repo = repo;
     }
     public async Task SendEmailConfirmation()
     {

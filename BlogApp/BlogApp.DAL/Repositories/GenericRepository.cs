@@ -11,7 +11,7 @@ public class GenericRepository<T>(BlogDbContext _context) :IGenericRepository<T>
 
     public IQueryable<T> GetAll()
         => Table.AsQueryable();  
-    
+  
     public async Task<T?> GetByIdAsync(int id)
        => await Table.FindAsync(id);
 
